@@ -10,8 +10,8 @@ public class PostClient {
 
     private final WebClient webClient;
 
-    public PostClient(WebClient.Builder builder) {
-        this.webClient = builder.baseUrl("https://jsonplaceholder.typicode.com").build();
+    public PostClient(WebClient webClient) {
+        this.webClient = webClient;
     }
 
     public Flux<Post> findAll() {
